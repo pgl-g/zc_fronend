@@ -12,6 +12,17 @@ export default defineConfig({
     vueJsx(),
     vueDevTools(),
   ],
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'scss',
+      pattern: []
+    }
+  },
+  server: {
+    port: 8080,
+    open: true,
+    cors: true, // 允许跨域
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

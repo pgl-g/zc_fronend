@@ -1,9 +1,11 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
+<script setup></script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <main class="main">saxasxa</main>
 </template>
+
+<style lang="scss">
+.main {
+  color: #fff;
+}
+</style>
