@@ -1,15 +1,11 @@
-<script setup></script>
+<script setup lang="ts">
+import { RouterView } from "vue-router";
+</script>
 
 <template>
-  <div class="ceshi">
-    <span class="xxx">哈哈</span>
+  <div id="app">
+    <RouterView></RouterView>
   </div>
 </template>
 
-<style lang="scss">
-.ceshi {
-  .xxx {
-    color: red;
-  }
-}
-</style>
+<style lang="scss"></style>
