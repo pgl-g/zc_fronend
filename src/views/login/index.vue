@@ -35,7 +35,9 @@
 
                   <div class="footer-wrapped">
                     <div class="forget-password">
-                      <span class="forget-password-button">忘记密码</span>
+                      <span class="forget-password-button" @click="openForget"
+                        >忘记密码</span
+                      >
                     </div>
 
                     <div class="footer-button">
@@ -115,6 +117,13 @@ const registerData = reactive({
   password: "",
   repassword: "",
 });
+
+// 忘记密码弹窗
+const forgetP = ref();
+// 打开忘记密码弹窗
+const openForget = () => {
+  forgetP.value.open();
+};
 </script>
 
 <style scoped lang="scss">

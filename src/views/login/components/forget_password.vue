@@ -91,22 +91,22 @@ const state = reactive({
 });
 
 // 打开验证邮箱和账号的弹窗
-const verifyAccount = async () => {
-  const res = await verify(forgetData);
-  if (res.status == 0) {
-    ElMessage({
-      message: "验证成功",
-      type: "success",
-    });
-    // localStorage.setItem 存放到浏览器的本地存储空间
-    // sessionStorage.setItem 存放到浏览器的会话存储空间
-    localStorage.setItem("id", res.id);
-    state.forgetPasswordDialog = false;
-    state.changePasswordDialog = true;
-  } else {
-    ElMessage.error("验证失败");
-  }
-};
+// const verifyAccount = async () => {
+//   const res = await verify(forgetData);
+//   if (res.status == 0) {
+//     ElMessage({
+//       message: "验证成功",
+//       type: "success",
+//     });
+//     // localStorage.setItem 存放到浏览器的本地存储空间
+//     // sessionStorage.setItem 存放到浏览器的会话存储空间
+//     localStorage.setItem("id", res.id);
+//     state.forgetPasswordDialog = false;
+//     state.changePasswordDialog = true;
+//   } else {
+//     ElMessage.error("验证失败");
+//   }
+// };
 // // 重置密码
 // const resetPassword = async () => {
 //   if (forgetData.password == forgetData.nextPassword) {
