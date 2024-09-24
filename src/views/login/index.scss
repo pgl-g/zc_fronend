@@ -1,0 +1,107 @@
+.header-wrapped {
+  .header-content {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title_w {
+      font-size: 13px;
+    }
+  }
+}
+
+.el-main {
+  background-image: url("xxx.jpg");
+  background-color: #000;
+  height: 600px;
+  --el-main-padding: 0;
+  .login-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    height: 600px;
+
+    .box-card {
+      width: 350px;
+      height: 375px;
+      float: right;
+      position: relative;
+      top: 14%;
+
+      .login-form,
+      .register-form {
+        .footer-wrapped {
+          display: flex;
+          flex-direction: column;
+
+          .forget-password {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px 0;
+            .forget-password-button {
+              font-size: 12px;
+              color: #409eff;
+              cursor: pointer;
+            }
+          }
+          .footer-button {
+            display: flex;
+            justify-content: center;
+            margin: 8px 0;
+            width: 100%;
+          }
+          .footer-go-register {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .go-register {
+              font-size: 12px;
+              color: #409eff;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.footer-wrapper {
+  margin-top: 8px;
+  .footer-content {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      color: #666;
+      font-size: 12px;
+    }
+  }
+}
+
+.el-form {
+  margin-top: 30px;
+}
+
+:deep(.el-tabs__item) {
+  font-size: 18px;
+  color: "#333";
+}
+
+:deep(.el-input__inner) {
+  height: 40px;
+}
+
+:deep(.el-form-item__label) {
+  height: 40px;
+  line-height: 40px;
+}
+
+:deep(.el-button) {
+  width: 300px;
+  height: 45px;
+  font-size: 16px;
+}

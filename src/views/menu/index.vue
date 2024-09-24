@@ -1,3 +1,45 @@
+<style lang="scss" scoped>
+@import url(./index.scss);
+</style>
+<script lang="ts" setup>
+import { ref } from "vue";
+import { Menu as IconMenu } from "@element-plus/icons-vue";
+// import departmentMsg from '@/components/department_message.vue'
+// import { getReadListAndStatus } from '@/api/dep_msg.js'
+import { useRouter } from "vue-router";
+// import {
+//   useUserInfo
+// } from '@/store/userinfor.js'
+// import {
+// 	useMsg
+// } from '@/store/message.js'
+// const msgStore = useMsg();
+// const userStore = useUserInfo();
+const router = useRouter();
+const name = localStorage.getItem("name");
+
+const goLogin = () => {
+  router.push("/login");
+};
+
+// const noread = ref(false)
+// const getUserReadList = async () => {
+// 	const res = await getReadListAndStatus(localStorage.getItem('id'))
+// 	if(JSON.parse(res[0].read_list) > 0){
+// 		noread.value = true
+// 	}else{
+// 		noread.value = false
+// 	}
+// }
+// getUserReadList()
+// 部门消息弹框
+// const props = defineProps(['foo'])
+const department_msg = ref();
+const openDepartmentMessage = () => {
+  department_msg.value.open();
+};
+</script>
+
 <template>
   <div class="common-layout">
     <el-container>
@@ -116,127 +158,3 @@
   <!--  原为departmentmsg修改为department_msg-->
   <departmentMsg ref="department_msg"></departmentMsg>
 </template>
-
-<script lang="ts" setup>
-import { ref } from "vue";
-import { Menu as IconMenu } from "@element-plus/icons-vue";
-// import departmentMsg from '@/components/department_message.vue'
-// import { getReadListAndStatus } from '@/api/dep_msg.js'
-import { useRouter } from "vue-router";
-// import {
-//   useUserInfo
-// } from '@/store/userinfor.js'
-// import {
-// 	useMsg
-// } from '@/store/message.js'
-// const msgStore = useMsg();
-// const userStore = useUserInfo();
-const router = useRouter();
-const name = localStorage.getItem("name");
-
-const goLogin = () => {
-  router.push("/login");
-};
-
-// const noread = ref(false)
-// const getUserReadList = async () => {
-// 	const res = await getReadListAndStatus(localStorage.getItem('id'))
-// 	if(JSON.parse(res[0].read_list) > 0){
-// 		noread.value = true
-// 	}else{
-// 		noread.value = false
-// 	}
-// }
-// getUserReadList()
-// 部门消息弹框
-// const props = defineProps(['foo'])
-const department_msg = ref();
-const openDepartmentMessage = () => {
-  department_msg.value.open();
-};
-</script>
-
-<style lang="scss" scoped>
-// 侧边栏
-.el-aside {
-  height: 100vh;
-  background: #2b303b;
-  width: 210px;
-  // 隐藏滚动条
-  overflow-x: hidden;
-
-  // 菜单
-  .el-menu {
-    background: #2b303b;
-    width: 210px;
-    height: 100vh;
-    border-right: 0px;
-  }
-
-  // 标题
-  .title {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    background: #2b303b;
-  }
-
-  .el-menu-item {
-    color: #fff;
-  }
-
-  // .el-sub-menu__title {
-  // 	color: #fff;
-  // }
-}
-
-.el-header {
-  display: flex;
-  height: 55px;
-  background: #262f3e;
-  color: #c1c6c8;
-  align-items: center;
-  justify-content: space-between;
-
-  // 欢迎语
-  .header-left-content {
-    font-size: 14px;
-  }
-
-  .header-right-content {
-    width: 160px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-
-// 徽章
-.item {
-  cursor: pointer;
-}
-
-.el-main {
-  --el-main-padding: 0;
-  background-color: #f3f4fa;
-}
-
-// 无子菜单的
-.el-menu-item:hover {
-  background: #006eff;
-}
-
-// 有子菜单的
-:deep(.el-sub-menu__title:hover) {
-  background: #006eff;
-}
-
-:deep(.el-sub-menu__title) {
-  color: #fff;
-}
-
-:deep(.el-menu--inline) {
-  background: #2b303b;
-}
-</style>
