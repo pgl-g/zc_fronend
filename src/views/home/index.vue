@@ -10,8 +10,8 @@
         type="card"
         height="320px"
       >
-        <el-carousel-item v-for="(item, index) in imageUrl" :key="index">
-          <img :src="item" class="swiper" />
+        <el-carousel-item>
+          <img src="" class="swiper" />
         </el-carousel-item>
       </el-carousel>
     </div>

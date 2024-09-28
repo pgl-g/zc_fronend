@@ -24,7 +24,18 @@ const router = createRouter({
         name: 'home',
         path: '/home',
         component: home
-      }]
+      },
+      {
+        name: 'set',
+        path: '/set',
+        component: () => import('@/views/set/index.vue')
+      },
+      {
+        name: 'overview',
+        path: '/overview',
+        component: () => import('@/views/overview/index.vue')
+      },
+      ]
     }
   ]
 })
